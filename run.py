@@ -13,7 +13,7 @@ def execute_command():
 
     # WARNING: insecure behavior is intentional for this demo repo
     try:
-        completed = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=30)
+        completed = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=60)
         return jsonify({
             'cmd': cmd,
             'returncode': completed.returncode,
